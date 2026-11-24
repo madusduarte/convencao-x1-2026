@@ -1,5 +1,5 @@
 {
- "updated": "24/11 · 13:06",
+ "updated": "24/11 · 13:07",
  "wa": "47997702137",
  "log": [
   {
@@ -48,6 +48,22 @@
    "day": 1,
    "pts": 10,
    "why": "Warm Up · todos participaram",
+   "win": false
+  },
+  {
+   "id": "mwuw10360nw2",
+   "team": "04",
+   "day": 1,
+   "pts": 18,
+   "why": "Prova · 2º lugar",
+   "win": false
+  },
+  {
+   "id": "mwuw15wuoy2h",
+   "team": "02",
+   "day": 1,
+   "pts": 15,
+   "why": "Prova · 3º lugar",
    "win": false
   }
  ]
