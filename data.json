@@ -1,5 +1,5 @@
 {
- "updated": "24/11 · 13:07",
+ "updated": "24/11 · 14:51",
  "wa": "47997702137",
  "log": [
   {
@@ -61,6 +61,38 @@
   {
    "id": "mwuw15wuoy2h",
    "team": "02",
+   "day": 1,
+   "pts": 15,
+   "why": "Prova · 3º lugar",
+   "win": false
+  },
+  {
+   "id": "mwuzpcxilwyd",
+   "team": "01",
+   "day": 1,
+   "pts": 25,
+   "why": "Prova · 1º lugar",
+   "win": true
+  },
+  {
+   "id": "mwuzph3o5vft",
+   "team": "02",
+   "day": 1,
+   "pts": 18,
+   "why": "Prova · 2º lugar",
+   "win": false
+  },
+  {
+   "id": "mwuzppfnekmo",
+   "team": "03",
+   "day": 1,
+   "pts": 12,
+   "why": "Prova · 4º lugar",
+   "win": false
+  },
+  {
+   "id": "mwuzpv4wvuub",
+   "team": "04",
    "day": 1,
    "pts": 15,
    "why": "Prova · 3º lugar",
