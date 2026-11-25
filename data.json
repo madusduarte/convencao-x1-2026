@@ -1,5 +1,5 @@
 {
- "updated": "25/11 · 13:26",
+ "updated": "25/11 · 13:51",
  "wa": "47997702137",
  "log": [
   {
@@ -240,6 +240,38 @@
    "day": 2,
    "pts": 10,
    "why": "Dinâmica do envelope · pessoa compartilhou",
+   "win": false
+  },
+  {
+   "id": "mwwd1dzxnngp",
+   "team": "01",
+   "day": 2,
+   "pts": 5,
+   "why": "Equipe completa na abertura",
+   "win": false
+  },
+  {
+   "id": "mwwd1ew55r3e",
+   "team": "02",
+   "day": 2,
+   "pts": 5,
+   "why": "Equipe completa na abertura",
+   "win": false
+  },
+  {
+   "id": "mwwd1fmsd2bd",
+   "team": "03",
+   "day": 2,
+   "pts": 5,
+   "why": "Equipe completa na abertura",
+   "win": false
+  },
+  {
+   "id": "mwwd1g7xz4hy",
+   "team": "04",
+   "day": 2,
+   "pts": 5,
+   "why": "Equipe completa na abertura",
    "win": false
   }
  ]
