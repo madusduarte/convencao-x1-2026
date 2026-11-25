@@ -1,5 +1,5 @@
 {
- "updated": "25/11 · 09:40",
+ "updated": "25/11 · 10:00",
  "wa": "47997702137",
  "log": [
   {
@@ -176,22 +176,6 @@
    "day": 2,
    "pts": 15,
    "why": "Prova · 3º lugar",
-   "win": false
-  },
-  {
-   "id": "mww42hkzhsjz",
-   "team": "03",
-   "day": 2,
-   "pts": 24,
-   "why": "Prova principal · 4º lugar",
-   "win": false
-  },
-  {
-   "id": "mww42wr1oe0l",
-   "team": "04",
-   "day": 2,
-   "pts": 36,
-   "why": "Prova principal · 2º lugar",
    "win": false
   }
  ]
