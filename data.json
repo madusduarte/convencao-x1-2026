@@ -1,5 +1,5 @@
 {
- "updated": "25/11 · 10:00",
+ "updated": "25/11 · 13:26",
  "wa": "47997702137",
  "log": [
   {
@@ -192,6 +192,54 @@
    "day": 2,
    "pts": 12,
    "why": "Prova · 4º lugar",
+   "win": false
+  },
+  {
+   "id": "mwwc4hdt6hc8",
+   "team": "02",
+   "day": 2,
+   "pts": 10,
+   "why": "Dinâmica do envelope · pessoa compartilhou",
+   "win": false
+  },
+  {
+   "id": "mwwc4q6e488x",
+   "team": "03",
+   "day": 2,
+   "pts": 10,
+   "why": "Dinâmica do envelope · pessoa compartilhou",
+   "win": false
+  },
+  {
+   "id": "mwwc4uj0vqz3",
+   "team": "01",
+   "day": 2,
+   "pts": 10,
+   "why": "Dinâmica do envelope · pessoa compartilhou",
+   "win": false
+  },
+  {
+   "id": "mwwc52u6e7rc",
+   "team": "04",
+   "day": 2,
+   "pts": 10,
+   "why": "Dinâmica do envelope · pessoa compartilhou",
+   "win": false
+  },
+  {
+   "id": "mwwc59jsx0pq",
+   "team": "01",
+   "day": 2,
+   "pts": 10,
+   "why": "Dinâmica do envelope · pessoa compartilhou",
+   "win": false
+  },
+  {
+   "id": "mwwc5ezu1xiv",
+   "team": "03",
+   "day": 2,
+   "pts": 10,
+   "why": "Dinâmica do envelope · pessoa compartilhou",
    "win": false
   }
  ]
