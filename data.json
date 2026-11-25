@@ -177,6 +177,22 @@
    "pts": 15,
    "why": "Prova · 3º lugar",
    "win": false
+  },
+  {
+   "id": "mww4sxhbvl58",
+   "team": "04",
+   "day": 2,
+   "pts": 18,
+   "why": "Prova · 2º lugar",
+   "win": false
+  },
+  {
+   "id": "mww4t1j8pmtc",
+   "team": "03",
+   "day": 2,
+   "pts": 12,
+   "why": "Prova · 4º lugar",
+   "win": false
   }
  ]
 }
