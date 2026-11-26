@@ -1,5 +1,5 @@
 {
- "updated": "26/11 · 15:27",
+ "updated": "26/11 · 16:40",
  "wa": "47997702137",
  "log": [
   {
@@ -648,6 +648,38 @@
    "day": 2,
    "pts": 12,
    "why": "Prova · 4º lugar",
+   "win": false
+  },
+  {
+   "id": "mwxyhttdzjs8",
+   "team": "01",
+   "day": 2,
+   "pts": 5,
+   "why": "Dinâmica Fabi",
+   "win": false
+  },
+  {
+   "id": "mwxyhuwxddxf",
+   "team": "02",
+   "day": 2,
+   "pts": 5,
+   "why": "Dinâmica Fabi",
+   "win": false
+  },
+  {
+   "id": "mwxyhvnwh771",
+   "team": "03",
+   "day": 2,
+   "pts": 5,
+   "why": "Dinâmica Fabi",
+   "win": false
+  },
+  {
+   "id": "mwxyhwe91696",
+   "team": "04",
+   "day": 2,
+   "pts": 5,
+   "why": "Dinâmica Fabi",
    "win": false
   }
  ]
