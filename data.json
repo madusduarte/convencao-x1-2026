@@ -1,5 +1,5 @@
 {
- "updated": "26/11 · 14:00",
+ "updated": "26/11 · 14:21",
  "wa": "47997702137",
  "log": [
   {
@@ -592,6 +592,30 @@
    "day": 1,
    "pts": 5,
    "why": "Equipe completa na abertura",
+   "win": false
+  },
+  {
+   "id": "mwxtk07ffmus",
+   "team": "04",
+   "day": 1,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxtk2buonho",
+   "team": "03",
+   "day": 1,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxtk6rq8u01",
+   "team": "02",
+   "day": 1,
+   "pts": 10,
+   "why": "DISC",
    "win": false
   }
  ]
