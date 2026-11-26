@@ -1,5 +1,5 @@
 {
- "updated": "25/11 · 17:24",
+ "updated": "26/11 · 12:28",
  "wa": "47997702137",
  "log": [
   {
@@ -336,6 +336,230 @@
    "day": 2,
    "pts": 36,
    "why": "Prova principal · 2º lugar",
+   "win": false
+  },
+  {
+   "id": "mwxpc8hr10jr",
+   "team": "04",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpcdf83cp9",
+   "team": "03",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpcnxcr03x",
+   "team": "02",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpd0zkl1r5",
+   "team": "04",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpd9ha4492",
+   "team": "01",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpdie1weyt",
+   "team": "04",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpdrqtgsjj",
+   "team": "04",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpe0h69ya1",
+   "team": "03",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpe6c49g4i",
+   "team": "03",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpenka1buq",
+   "team": "02",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpetzho3zy",
+   "team": "02",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpeyr5kzj1",
+   "team": "02",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpf62gjdoi",
+   "team": "03",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpfbnopw09",
+   "team": "01",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpfkp5pegu",
+   "team": "01",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpfqgk11jy",
+   "team": "01",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpg43ct19w",
+   "team": "04",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpgiz8wio6",
+   "team": "01",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpgsz2e8dw",
+   "team": "03",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxphp4bkc4s",
+   "team": "01",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpi0mz01w4",
+   "team": "04",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpi8c3cqce",
+   "team": "02",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpig9l21p8",
+   "team": "04",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpiohl3nrw",
+   "team": "02",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpix9yytmv",
+   "team": "03",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpj4ej2emy",
+   "team": "01",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpjadi3dqx",
+   "team": "02",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxpjgf06p29",
+   "team": "01",
+   "day": 2,
+   "pts": 10,
+   "why": "DISC",
    "win": false
   }
  ]
