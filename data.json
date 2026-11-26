@@ -1,5 +1,5 @@
 {
- "updated": "26/11 · 12:28",
+ "updated": "26/11 · 14:00",
  "wa": "47997702137",
  "log": [
   {
@@ -560,6 +560,38 @@
    "day": 2,
    "pts": 10,
    "why": "DISC",
+   "win": false
+  },
+  {
+   "id": "mwxsszihlafp",
+   "team": "01",
+   "day": 1,
+   "pts": 5,
+   "why": "Equipe completa na abertura",
+   "win": false
+  },
+  {
+   "id": "mwxst0iec9o0",
+   "team": "02",
+   "day": 1,
+   "pts": 5,
+   "why": "Equipe completa na abertura",
+   "win": false
+  },
+  {
+   "id": "mwxst1km41hm",
+   "team": "03",
+   "day": 1,
+   "pts": 5,
+   "why": "Equipe completa na abertura",
+   "win": false
+  },
+  {
+   "id": "mwxst49h57xy",
+   "team": "04",
+   "day": 1,
+   "pts": 5,
+   "why": "Equipe completa na abertura",
    "win": false
   }
  ]
