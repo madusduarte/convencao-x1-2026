@@ -671,7 +671,7 @@ function renderTeam(id){
      <div class="kicker">Próxima prova</div>
      ${nxt?`<div class="nextp"><span>${nxt.d.dow} ${nxt.d.dm} · ${nxt.it.t}</span><b>${esc(nxt.it.title)}</b><span>${nxt.x2?"Prova principal: vale dobro (50 · 36 · 30 · 24)":"Prova: 25 · 18 · 15 · 12"}</span></div>`:`<div class="nextp"><b>Todas as provas foram disputadas</b></div>`}
      <ul class="provas">${provas.map(x=>`<li class="${x.done?"done":""}"><span>${x.d.dm} ${x.it.t} · ${esc(x.it.title.split(":")[0].split(" · ")[0])}</span><b>${x.x2?"×2":"×1"}</b></li>`).join("")}</ul>
-     <div class="actions"><button class="btn ${isMine?"ghost":""}" type="button" id="mineBtn">${isMine?"Esta é a sua equipe ✓":"Esta é a minha equipe"}</button><a class="btn ghost" href="#radio">Responder pesquisa</a></div>
+     <div class="actions"><button class="btn ${isMine?"ghost":""}" type="button" id="mineBtn">${isMine?"Esta é a sua equipe ✓":"Esta é a minha equipe"}</button><button class="btn ghost" type="button" onclick="document.getElementById('radio').scrollIntoView({behavior:'smooth'})">Responder pesquisa</button></div>
     </div>
     <div class="feed" style="margin-top:0"><h4><span>VOLTAS DA EQUIPE ${id}</span></h4><ul>${feedItems(STATE.log,30,id)||'<li class="empty">Ainda sem pontos lançados. Pontualidade e participação já contam desde a abertura do dia 24!</li>'}</ul></div>
    </div>`;
@@ -710,14 +710,16 @@ function closeTelao(){$("#telao").hidden=true;document.body.style.overflow="";cl
 $("#fsBtn").addEventListener("click",()=>{const el=document.documentElement;if(document.fullscreenElement){document.exitFullscreen&&document.exitFullscreen().catch(()=>{})}else if(el.requestFullscreen){el.requestFullscreen().catch(()=>{$("#fsBtn").hidden=true})}else{$("#fsBtn").hidden=true}});
 
 /* ---------- rotas ---------- */
+const RADIO_HOME=document.createComment("radio");$("#radio").before(RADIO_HOME);
+function placeRadio(inTeam){const r=$("#radio");if(inTeam){if(r.parentNode!==$("#teamview"))$("#teamview").prepend(r)}else if(r.previousSibling!==RADIO_HOME)RADIO_HOME.after(r)}
 function route(){
   const h=location.hash.replace("#","");
   if(/^telao/.test(h)){openTelao();return}
   closeTelao();
   document.body.classList.toggle("dir",h==="direcao");
   const m=h.match(/^equipe-(0[1-4])/);
-  if(m&&renderTeam(m[1])){$("#main").hidden=true;$("#teamview").hidden=false;window.scrollTo(0,0);return}
-  const wasHidden=$("#main").hidden;$("#main").hidden=false;$("#teamview").hidden=true;document.title="Convenção X1 2026";
+  if(m&&renderTeam(m[1])){placeRadio(true);$("#main").hidden=true;$("#teamview").hidden=false;window.scrollTo(0,0);return}
+  placeRadio(false);const wasHidden=$("#main").hidden;$("#main").hidden=false;$("#teamview").hidden=true;document.title="Convenção X1 2026";
   if(h&&/^[a-z]+$/.test(h)){const el=document.getElementById(h);if(el)requestAnimationFrame(()=>el.scrollIntoView())}else if(wasHidden)window.scrollTo(0,0);
 }
 window.addEventListener("hashchange",route);route();
