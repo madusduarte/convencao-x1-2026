@@ -220,6 +220,10 @@ select:focus,input:focus,textarea:focus{outline:none;border-color:var(--teal2)}
 .teampick button{appearance:none;font:inherit;font-family:var(--display);font-weight:900;font-size:18px;padding:10px 0;border-radius:10px;border:1.5px solid var(--line);background:var(--bg2);color:var(--ink);cursor:pointer}
 .teampick button[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#061310}
 .msg{font-size:14px;color:var(--mute);min-height:1.2em}
+.notepick{display:grid;grid-template-columns:repeat(10,1fr);gap:6px}
+.notepick button{appearance:none;font:inherit;font-family:var(--display);font-weight:900;font-size:17px;padding:10px 0;border-radius:10px;border:1.5px solid var(--line);background:var(--bg2);color:var(--ink);cursor:pointer}
+.notepick button[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#061310}
+@media (max-width:560px){.notepick{grid-template-columns:repeat(5,1fr)}}
 
 /* DIREÇÃO DE PROVA */
 body.dir #radio,body.dir .links a[href="#radio"]{display:none!important}
@@ -328,7 +332,7 @@ body.dir #radio,body.dir .links a[href="#radio"]{display:none!important}
 
 <nav><div class="wrap">
   <a class="brand" href="#inicio" style="color:inherit;padding:0;background:none"><i class="checker"></i>X1 · 2026</a>
-  <div class="links"><a href="#programacao" class="k">Programação</a><a href="#ranking" class="k">Ranking</a><a href="#radio">Perguntas</a><a href="#pontos">Pontuação</a></div>
+  <div class="links"><a href="#programacao" class="k">Programação</a><a href="#ranking" class="k">Ranking</a><a href="#radio">Pesquisa</a><a href="#pontos">Pontuação</a></div>
 </div></nav>
 <div class="agora" id="agora" hidden><div class="wrap"><span class="live"><i></i>AGORA NA PISTA</span><div class="now" id="agNow"></div><div class="nxt" id="agNext"></div></div></div>
 
@@ -368,20 +372,21 @@ body.dir #radio,body.dir .links a[href="#radio"]{display:none!important}
 
 <section id="radio"><div class="wrap">
   <div class="sechead">
-    <div><div class="kicker">Rádio da equipe</div><h2>PERGUNTE PARA <span class="outline">O BOX</span></h2></div>
-    <p>Mande sua pergunta para quem está no palco. A organização reúne as perguntas e leva ao palestrante.</p>
+    <div><div class="kicker">Pesquisa da convenção</div><h2>COMO FOI A <span class="outline">CORRIDA?</span></h2></div>
+    <p>Conte para a organização o que você achou da Convenção X1 2026. Sua opinião ajuda a deixar a próxima ainda melhor.</p>
   </div>
   <div class="radio">
     <div class="card">
       <h3><i class="checker" style="background-size:6px 6px"></i>Como funciona</h3>
-      <p>Escolha a palestra, sua equipe e escreva a pergunta. O botão abre o WhatsApp com a mensagem pronta para a organização, que leva a pergunta ao palco.</p>
-      <p>As perguntas enviadas por aqui não valem pontos para a equipe. Servem só para a sua dúvida chegar ao palco.</p>
+      <p>Preencha seu nome, dê uma nota de 1 a 10 e conte o que gostou, o que não gostou e o que sugere para a próxima convenção.</p>
+      <p>O botão abre o WhatsApp com as respostas prontas para a organização. É só tocar em enviar.</p>
     </div>
     <form class="card q" id="qform" novalidate>
-      <label class="f" for="qTalk">PALESTRA<select id="qTalk"></select></label>
-      <div class="f" style="display:flex;flex-direction:column;gap:6px;font-family:var(--display);font-size:11px;font-weight:700;letter-spacing:.18em;color:var(--teal)">SUA EQUIPE<div class="teampick" id="qTeam"></div></div>
-      <label class="f" for="qName">SEU NOME<input id="qName" autocomplete="name" placeholder="Como você quer ser chamado(a)"></label>
-      <label class="f" for="qText">PERGUNTA<textarea id="qText" placeholder="Escreva sua pergunta"></textarea></label>
+      <label class="f" for="qName">SEU NOME<input id="qName" autocomplete="name" placeholder="Seu nome"></label>
+      <div class="f" style="display:flex;flex-direction:column;gap:6px;font-family:var(--display);font-size:11px;font-weight:700;letter-spacing:.18em;color:var(--teal)">NOTA DE 1 A 10 PARA A CONVENÇÃO<div class="notepick" id="qNota" role="group" aria-label="Nota de 1 a 10"></div></div>
+      <label class="f" for="qLike">O QUE VOCÊ GOSTOU NA CONVENÇÃO?<textarea id="qLike" placeholder="O que mais gostou"></textarea></label>
+      <label class="f" for="qDislike">O QUE VOCÊ NÃO GOSTOU?<textarea id="qDislike" placeholder="O que não funcionou para você"></textarea></label>
+      <label class="f" for="qSug">SUGESTÃO PARA A PRÓXIMA<textarea id="qSug" placeholder="Sua sugestão para a próxima convenção"></textarea></label>
       <button class="btn" type="submit" id="qSend">Enviar pelo WhatsApp</button>
       <div class="msg" id="qMsg" role="status"></div>
     </form>
@@ -496,14 +501,14 @@ const DAYS=[
    ["15:00","Pit Stop · coffee break","","brk"],
    ["15:30","Gestão de carteira a partir do BI","Fabiana K","talk"],
    ["16:30","GP Interlagos: várias dinâmicas em uma só","Todo o time","prova"],
-   ["17:00","Trava de recebíveis","Gilson","talk"],
    ["18:00","Bandeirada do dia","","key end"]]]]},
- {n:"04",date:"2026-11-27",dow:"Sex",dm:"27/11",title:"Bandeirada final",sub:"Palestra MASTER, jurídico, Estratégias 2027 e festa",periods:[
+ {n:"04",date:"2026-11-27",dow:"Sex",dm:"27/11",title:"Bandeirada final",sub:"Palestra MASTER, jurídico, trava de recebíveis, Estratégias 2027 e festa",periods:[
   ["MANHÃ",[
    ["07:30","Check-in e abertura","","key"],
    ["07:35","Palestra MASTER","Suzana","talk",["Logo após: Pit Stop · coffee break para toda a empresa"]],
    ["09:00","Jurídico","Dra. Ana e equipe","talk"],
-   ["10:00","Estratégias 2027 e encerramento · bandeirada final e campeão","Gilson e Michael","key"],
+   ["10:00","Trava de recebíveis","Gilson","talk"],
+   ["10:45","Estratégias 2027 e encerramento · bandeirada final e campeão","Gilson e Michael","key"],
    ["11:30","Dinâmica: Mostre o seu talento","Todo o time",""],
    ["12:00","Check-out do evento","","brk"]]],
   ["NOITE",[
@@ -666,7 +671,7 @@ function renderTeam(id){
      <div class="kicker">Próxima prova</div>
      ${nxt?`<div class="nextp"><span>${nxt.d.dow} ${nxt.d.dm} · ${nxt.it.t}</span><b>${esc(nxt.it.title)}</b><span>${nxt.x2?"Prova principal: vale dobro (50 · 36 · 30 · 24)":"Prova: 25 · 18 · 15 · 12"}</span></div>`:`<div class="nextp"><b>Todas as provas foram disputadas</b></div>`}
      <ul class="provas">${provas.map(x=>`<li class="${x.done?"done":""}"><span>${x.d.dm} ${x.it.t} · ${esc(x.it.title.split(":")[0].split(" · ")[0])}</span><b>${x.x2?"×2":"×1"}</b></li>`).join("")}</ul>
-     <div class="actions"><button class="btn ${isMine?"ghost":""}" type="button" id="mineBtn">${isMine?"Esta é a sua equipe ✓":"Esta é a minha equipe"}</button><a class="btn ghost" href="#radio">Mandar pergunta</a></div>
+     <div class="actions"><button class="btn ${isMine?"ghost":""}" type="button" id="mineBtn">${isMine?"Esta é a sua equipe ✓":"Esta é a minha equipe"}</button><a class="btn ghost" href="#radio">Responder pesquisa</a></div>
     </div>
     <div class="feed" style="margin-top:0"><h4><span>VOLTAS DA EQUIPE ${id}</span></h4><ul>${feedItems(STATE.log,30,id)||'<li class="empty">Ainda sem pontos lançados. Pontualidade e participação já contam desde a abertura do dia 24!</li>'}</ul></div>
    </div>`;
@@ -717,32 +722,26 @@ function route(){
 }
 window.addEventListener("hashchange",route);route();
 
-/* ---------- perguntas ---------- */
+/* ---------- pesquisa ---------- */
 (function(){
-  const talks=[];DAYS.forEach(d=>flatDay(d).forEach(it=>{if(/talk|ext/.test(it.cls))talks.push({d,it})}));
-  const a=agoraInfo();let sel=0;
-  talks.forEach((x,i)=>{if(a&&a.now&&x.d===DAYS[a.di]&&x.it.m<=spParts(nowDate()).min)sel=i});
-  if(!a){const iso=todayISO();const k=talks.findIndex(x=>x.d.date>=iso);if(k>=0)sel=k}
-  $("#qTalk").innerHTML=talks.map((x,i)=>`<option value="${i}" ${i===sel?"selected":""}>${x.d.dm} ${x.it.t} · ${esc(x.it.title)}${x.it.who?" ("+esc(x.it.who)+")":""}</option>`).join("");
-  let team=LS.get("x1mine")||"";
-  const tp=$("#qTeam");tp.innerHTML=TEAMS.map(t=>`<button type="button" data-t="${t.id}" aria-pressed="${t.id===team}">${t.id}</button>`).join("");
-  tp.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;team=b.dataset.t;tp.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x.dataset.t===team))});
+  let nota=0;
+  const np=$("#qNota");np.innerHTML=Array.from({length:10},(_,i)=>`<button type="button" data-n="${i+1}" aria-pressed="false">${i+1}</button>`).join("");
+  np.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;nota=+b.dataset.n;np.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",+x.dataset.n===nota))});
   $("#qName").value=LS.get("x1name")||"";
-  if(!STATE.wa){$("#qSend").disabled=true;$("#qMsg").textContent="O envio abre em breve, assim que a organização ativar o número do box."}
   $("#qform").addEventListener("submit",e=>{
     e.preventDefault();
-    const txt=$("#qText").value.trim(),nm=$("#qName").value.trim();
-    if(!team){$("#qMsg").textContent="Escolha sua equipe.";return}
-    if(!txt){$("#qMsg").textContent="Escreva a pergunta antes de enviar.";$("#qText").focus();return}
+    const nm=$("#qName").value.trim(),like=$("#qLike").value.trim(),dis=$("#qDislike").value.trim(),sug=$("#qSug").value.trim();
+    if(!nm){$("#qMsg").textContent="Escreva seu nome.";$("#qName").focus();return}
+    if(!nota){$("#qMsg").textContent="Escolha uma nota de 1 a 10.";return}
+    if(!like&&!dis&&!sug){$("#qMsg").textContent="Responda pelo menos uma das perguntas.";$("#qLike").focus();return}
     if(!STATE.wa){$("#qMsg").textContent="O envio ainda não foi ativado pela organização.";return}
     LS.set("x1name",nm);
-    const t=talks[+$("#qTalk").value];
-    const body=`🏁 PERGUNTA · EQUIPE ${team}\nPalestra: ${t.it.title}${t.it.who?" ("+t.it.who+")":""}\nDe: ${nm||"(sem nome)"}\n\n${txt}`;
+    const team=LS.get("x1mine")||"";
+    const body=`📋 PESQUISA DA CONVENÇÃO X1 2026${team?" · EQUIPE "+team:""}\nNome: ${nm}\nNota: ${nota}/10\n\nO que gostou: ${like||"-"}\n\nO que não gostou: ${dis||"-"}\n\nSugestão para a próxima: ${sug||"-"}`;
     let num=STATE.wa.replace(/\D/g,"");if(num.length<=11)num="55"+num;
     const url=`https://wa.me/${num}?text=${encodeURIComponent(body)}`;
     const link=document.createElement("a");link.href=url;link.target="_blank";link.rel="noopener";document.body.appendChild(link);link.click();link.remove();
-    $("#qMsg").innerHTML=`Abrindo o WhatsApp. Se não abrir, <a href="${esc(url)}" target="_blank" rel="noopener" style="color:var(--teal2)">toque aqui</a>.`;
-    $("#qText").value="";
+    $("#qMsg").innerHTML=`Abrindo o WhatsApp. Se não abrir, <a href="${esc(url)}" target="_blank" rel="noopener" style="color:var(--teal2)">toque aqui</a>. Obrigado pela resposta!`;
   });
 })();
 
@@ -813,7 +812,7 @@ const HELP=[
    <div class="actions"><button class="btn" type="button" id="aPub">Publicar no ranking</button><span class="msg" id="aPubMsg">Ao publicar, a página de todo mundo atualiza na hora.</span></div>
    <details style="margin-top:18px"><summary style="cursor:pointer;color:var(--mute)">Lançamentos já publicados (${STATE.log.length}) e número do WhatsApp</summary>
     <div class="pend feed"><ul id="aHist"></ul></div>
-    <div class="grid"><label class="f span2" for="aWa">WHATSAPP QUE RECEBE AS PERGUNTAS (COM DDI E DDD)<input id="aWa" inputmode="tel" placeholder="55 48 99999-9999" value="${esc(STATE.wa)}"></label></div>
+    <div class="grid"><label class="f span2" for="aWa">WHATSAPP QUE RECEBE A PESQUISA (COM DDI E DDD)<input id="aWa" inputmode="tel" placeholder="55 48 99999-9999" value="${esc(STATE.wa)}"></label></div>
    </details></div>`;
   let team="";
   $("#aTeam").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;team=b.dataset.t;$("#aTeam").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x.dataset.t===team))});
